@@ -1,15 +1,24 @@
-const km = document.getElementById(`km`);
-const eta = document.getElementById(`eta`);
-const button = document.getElementById(`send`);
+const button = document.getElementById(`btn`);
 
 button.addEventListener(`click`, function (event) {
   //tolgo il refresh della pagina
   event.preventDefault();
 
   //dati calcolo costo al km
-  let euroKm = document.getElementById(`km`).value * 0.21;
-  let prezzo = `${euroKm} €`
+  const km = document.getElementById(`km`);
+  const euroKm = document.getElementById(`km`).value * 0.21;
+  const prezzo = `${euroKm} €`;
   console.log(prezzo);
 
-  
+  //dati calcolo sconto
+  const eta = document.getElementById(`eta`);
+  const scontoMinorenne = prezzo * 0.2;
+  const scontoOver65 = prezzo * 0.4;
+
+  if (eta === `minorenne`) {
+    scontoMinorenne;
+  } else if (eta === `over-65`) scontoOver65;
+  else {
+    prezzo;
+  }
 });
