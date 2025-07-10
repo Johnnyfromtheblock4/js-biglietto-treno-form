@@ -13,11 +13,13 @@
     <title>js-biglietto-treno-form</title>
   </head>
   <body>
-    <div class="container">
+    <h1 class="text-center text-white">🚄CALCOLA IL PREZZO DEL TUO BIGLIETTO🚄</h1>
+    <div class="container mb-4">
       <div class="row">
-        <form action="#">
+        <form action="#" class="d-flex flex-wrap gap-3 justify-content-center align-items-stretch pt-3">
           <!-- Nome e cognome -->
-          <div class="col-12">
+          <div class="col-12 col-md-3">
+            <p class="text-center text-primary">Nome e Cognome</p>
             <input
               type="text"
               name="name"
@@ -27,7 +29,8 @@
             />
           </div>
           <!-- Km da percorrere -->
-          <div class="col-12">
+          <div class="col-12 col-md-3">
+            <p class="text-center text-primary">Km da percorrere</p>
             <input
               type="text"
               name="km"
@@ -37,7 +40,8 @@
             />
           </div>
           <!-- Fascia d'età -->
-          <div class="col-12">
+          <div class="col-12 col-md-3">
+            <p class="text-center text-primary">Età</p>
             <select name="eta" id="eta" class="form-select">
               <option value="">Età</option>
               <option value="minorenne">Minorenne</option>
@@ -46,18 +50,23 @@
             </select>
           </div>
           <!-- Bottone -->
-          <div class="col-12">
+          <div class="col-12 text-center pb-3">
             <button type="submit" id="btn" class="btn btn-success">
               Invia
             </button>
           </div>
         </form>
-        <!-- Carta da restituire -->
+      </div>
+    </div>
+    <!-- Carta da restituire -->
+    <h1 class="text-center text-white">🎫IL TUO BIGLIETTO🎫</h1>
+    <div class="container">
+      <div class="row">
         <div class="col-12">
           <div id="result-form">
             <div class="card">
               <div class="card-header" id="ticket">
-                <h3>Dettaglio passeggero</h3>
+                <h3>DETTAGLIO PASSEGGERO</h3>
               </div>
               <div class="card-body">
                 <div class="row">

@@ -1,5 +1,5 @@
 const button = document.getElementById(`btn`);
-
+//geneto 5 numeri per codiceCP
 function generateCP(cplength) {
   let number = [];
   for (let i = 0; i < cplength; i++) {
