@@ -18,8 +18,15 @@ button.addEventListener(`click`, function (event) {
   } else {
     prezzo = euroKm;
   }
-  console.log(`${prezzo.toFixed(2)} €`);
-});
 
-//recupero i campi della form
-const name = document.getElementById(`name`).value;
+  //recupero i campi della form
+  const name = document.getElementById(`name`).value;
+
+  const costo = `${prezzo.toFixed(2)} €`;
+
+
+  //stampo risultati
+  document.getElementById(`show-name`).innerText = name;
+  
+  document.getElementById(`show-costo`).innerText = costo;
+});
