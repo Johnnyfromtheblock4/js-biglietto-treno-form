@@ -29,6 +29,7 @@ button.addEventListener(`click`, function (event) {
     prezzo = euroKm;
   }
 
+  //calcolo tipologia biglietto
   if (eta === `minorenne`) {
     offerta = `Biglietto under`;
   } else if (eta === `over-65`) {
@@ -37,12 +38,29 @@ button.addEventListener(`click`, function (event) {
     offerta = `Biglietto standard`;
   }
 
+  // const grifondoro = `img/grifondoro.png`;
+  // const tassorosso = `img/tassorosso.png`;
+  // const serpeverde = `img/serpeverde.png`;
+  // const corvonero = `img/corvonero.png`;
+  // let casaImage;
+
+  // if (casa === `grifondoro`) {
+  //   casaImage = grifondoro;
+  // } else if (casa === `tassorosso`) {
+  //   casaImage = tassorosso;
+  // } else if (casa === `serpeverde`) {
+  //   casaImage = serpeverde;
+  // } else {
+  //   casaImage = corvonero;
+  // }
+
   //recupero i campi della form
   const name = document.getElementById(`name`).value;
   const biglietto = offerta;
   const carrozza = parseInt(Math.random() * 30);
   const costo = `${prezzo.toFixed(2)} €`;
   const codiceCP = generateCP(5);
+  // const casa = casaImage;
 
   //stampo risultati
   document.getElementById(`show-name`).innerText = name;
@@ -50,6 +68,7 @@ button.addEventListener(`click`, function (event) {
   document.getElementById(`show-carrozza`).innerText = carrozza;
   document.getElementById(`show-costo`).innerText = costo;
   document.getElementById(`show-codice`).innerText = codiceCP;
+  // document.getElementById(`show-casa`).innerText = `<img src="${casaImage}"`;
 });
 
 //creare offerta randomica usando function

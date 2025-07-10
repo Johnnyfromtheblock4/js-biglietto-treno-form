@@ -20,7 +20,7 @@
       <div class="row">
         <form
           action="#"
-          class="d-flex flex-wrap gap-3 justify-content-center align-items-stretch pt-3"
+          class="d-flex flex-wrap justify-content-center align-items-stretch pt-3"
         >
           <!-- Nome e cognome -->
           <div class="col-12 col-md-3">
@@ -54,8 +54,20 @@
               <option value="over-65">Over 65</option>
             </select>
           </div>
+          <!-- Casa -->
+          <div class="col-12 col-md-3">
+            <p class="text-center text-primary">Casa</p>
+            <select name="casa" id="casa" class="form-select">
+              <option value="">Casa</option>
+              <option value="serpeverde">Serpeverde</option>
+              <option value="corvonero">Corvonero</option>
+              <option value="grifondoro">Grifondoro</option>
+              <option value="tassorosso">Tassorosso</option>
+            </select>
+          </div>
+          
           <!-- Bottone -->
-          <div class="col-12 text-center pb-3">
+          <div class="col-12 text-center pt-3 pb-3">
             <button type="submit" id="btn" class="btn btn-success">
               Invia
             </button>
@@ -102,6 +114,10 @@
                   <div class="col-12 col-md-2">
                     <p>Costo biglietto</p>
                     <span id="show-costo"></span>
+                  </div>
+                  <div class="col-12">
+                    <p class="text-center">Casa</p>
+                    <span id="show-casa"></span>
                   </div>
                 </div>
               </div>
