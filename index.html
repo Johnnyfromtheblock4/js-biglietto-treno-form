@@ -16,8 +16,18 @@
     <div class="container">
       <div class="row">
         <form action="#">
+          <!-- Nome e cognome -->
           <div class="col-12">
-            <!-- Km da percorrere -->
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Nome e Cognome"
+            />
+          </div>
+          <!-- Km da percorrere -->
+          <div class="col-12">
             <input
               type="text"
               name="km"
@@ -42,6 +52,35 @@
             </button>
           </div>
         </form>
+        <!-- Carta da restituire -->
+        <div class="col-12">
+          <div id="result-form">
+            <div class="card">
+              <div class="card-header" id="ticket">
+                <h3>Dettaglio passeggero</h3>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <span id="show-name">NOME PASSEGGERO</span>
+                  </div>
+                  <div class="col-md-2">
+                    <span id="show-name">Offerta</span>
+                  </div>
+                  <div class="col-md-2">
+                    <span id="show-name">Carrozza</span>
+                  </div>
+                  <div class="col-md-2">
+                    <span id="show-name">Codice CP</span>
+                  </div>
+                  <div class="col-md-2">
+                    <span id="show-name">Costo biglietto</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>

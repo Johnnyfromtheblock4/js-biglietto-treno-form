@@ -20,3 +20,6 @@ button.addEventListener(`click`, function (event) {
   }
   console.log(`${prezzo.toFixed(2)} €`);
 });
+
+//recupero i campi della form
+const name = document.getElementById(`name`).value;
