@@ -15,18 +15,18 @@ button.addEventListener(`click`, function (event) {
   event.preventDefault();
 
   //dati calcolo costo al km
-  const euroKm = parseInt(document.getElementById(`km`).value) * 0.21;
+  const basePrice = parseInt(document.getElementById(`km`).value) * 0.21;
 
   //dati calcolo sconto
   const eta = document.getElementById(`eta`).value;
   let prezzo = 0;
 
   if (eta === `minorenne`) {
-    prezzo = euroKm * 0.8;
+    prezzo = basePrice * 0.8;
   } else if (eta === `over-65`) {
-    prezzo = euroKm * 0.6;
+    prezzo = basePrice * 0.6;
   } else {
-    prezzo = euroKm;
+    prezzo = basePrice;
   }
 
   //calcolo tipologia biglietto
@@ -38,21 +38,21 @@ button.addEventListener(`click`, function (event) {
     offerta = `Biglietto standard`;
   }
 
-  // const grifondoro = `img/grifondoro.png`;
-  // const tassorosso = `img/tassorosso.png`;
-  // const serpeverde = `img/serpeverde.png`;
-  // const corvonero = `img/corvonero.png`;
-  // let casaImage;
+  const grifondoro = `img/grifondoro.png`;
+  const tassorosso = `img/tassorosso.png`;
+  const serpeverde = `img/serpeverde.png`;
+  const corvonero = `img/corvonero.png`;
+  let casaImage;
 
-  // if (casa === `grifondoro`) {
-  //   casaImage = grifondoro;
-  // } else if (casa === `tassorosso`) {
-  //   casaImage = tassorosso;
-  // } else if (casa === `serpeverde`) {
-  //   casaImage = serpeverde;
-  // } else {
-  //   casaImage = corvonero;
-  // }
+  if (casa === `grifondoro`) {
+    casaImage = grifondoro;
+  } else if (casa === `tassorosso`) {
+    casaImage = tassorosso;
+  } else if (casa === `serpeverde`) {
+    casaImage = serpeverde;
+  } else {
+    casaImage = corvonero;
+  }
 
   //recupero i campi della form
   const name = document.getElementById(`name`).value;
@@ -68,7 +68,7 @@ button.addEventListener(`click`, function (event) {
   document.getElementById(`show-carrozza`).innerText = carrozza;
   document.getElementById(`show-costo`).innerText = costo;
   document.getElementById(`show-codice`).innerText = codiceCP;
-  // document.getElementById(`show-casa`).innerText = `<img src="${casaImage}"`;
+  document.getElementById(`show-casa`).innerHTML = `<img src="${casaImage}"`;
 });
 
 //creare offerta randomica usando function
